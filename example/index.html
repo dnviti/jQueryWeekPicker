@@ -2,20 +2,23 @@
 
 <head>
     <link href="jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet">
-    <script type="text/javascript" src="src/weekPicker.js"></script>
+    <script type="text/javascript" src="src/weekPicker.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <input type="text" id="weekPicker1" />
     <br />
     <br />
-    <input type="text" id="weekPicker2" value="2016-51" />
+    <input type="text" id="weekPicker2" value="2017-03" />
+    <br />
+    <br /> Icons <a href="http://fontawesome.io/icons/" target="_blank">HERE</a>
 
     <script src="jquery-ui-1.12.1/external/jquery/jquery-3.1.1.min.js"></script>
     <script src="jquery-ui-1.12.1/jquery-ui.js"></script>
     <script>
-        convertToWeekPicker($("#weekPicker1"))
-        convertToWeekPicker($("#weekPicker2"))
+        convertToWeekPicker($("#weekPicker1")) // no icon
+        convertToWeekPicker($("#weekPicker2"), 'calendar') // calendar icon
     </script>
 
 </body>

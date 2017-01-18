@@ -91,11 +91,13 @@ var setWeekCalendar = function(settingElement) {
 
 };
 
-var convertToWeekPicker = function(targetElement) {
+var convertToWeekPicker = function(targetElement, fontAwesomeIcon) {
     if (targetElement.prop("tagName") == "INPUT" && (targetElement.attr("type") == "text" || targetElement.attr("type") == "hidden")) {
         var week = targetElement.val();
         $('<span class="displayDate" style="display:none">' + week + '</span>').insertBefore(targetElement);
-        $('<i class="fa fa-calendar showCalendar" aria-hidden="true" style="cursor:pointer;margin-left: 10px;margin-top: 3px;" onclick="javascript:showWeekCalendar(this)"></i>').insertAfter(targetElement);
+        if (fontAwesomeIcon) {
+            $('<i class="fa fa-' + fontAwesomeIcon + ' showCalendar" aria-hidden="true" style="cursor:pointer;margin-left: 10px;margin-top: 3px;" onclick="javascript:showWeekCalendar(this)"></i>').insertAfter(targetElement);
+        }
         setWeekCalendar(targetElement);
     } else {
         targetElement.replaceWith("<span>ERROR: please control js console</span>");

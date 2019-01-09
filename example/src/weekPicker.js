@@ -57,10 +57,12 @@ var setWeekCalendar = function(settingElement) {
             if (weekNum < 10) {
                 weekNum = "0" + weekNum;
             }
+/*
             var weekYear = datepickerValue.getFullYear();
             if (datepickerValue.getMonth() == 11 && weekNum == "01") {
                 weekYear += 1;
             }
+*/
             var ywString = weekYear + '-' + weekNum;
             $(this).val(ywString);
             $(this).prev().html(ywString);
